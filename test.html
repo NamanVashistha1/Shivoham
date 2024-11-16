@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healing Touch - Physiotherapy & Naturopathy Clinic</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+   <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #2C7873;
+            --secondary: #6FB98F;
+            --accent: #4B9E98;
+            --light: #E5F4F1;
+            --dark: #1B4B47;
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        /* Nav Section */
+nav {
+    background-color: #162243;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f3f1ff;
+}
+
+.contact-info p {
+    font-size: 14px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* For Mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #162243;
+        padding: 20px;
+        border-radius: 8px;
+        width: 200px;
+        text-align: right;
+    }
+
+    .nav-links a {
+        color: #fff;
+    }
+
+    .nav-links a:hover {
+        color: #f3f1ff;
+    }
+
+    .contact-info {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 65vh;
+            background-color: white;
+            max-width: 95%;
+            margin: 0 auto;
+            margin-top: 21px;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding: 20px;
+            animation: textFadeIn 1.5s ease-out;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #162243;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .generic-button{
+            padding: 12px 24px;
+            /* border: none; */
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: #4338CA;
+        }
+        .hero-image {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            /* max-width: 80%; */
+            width: 100%;
+            border-radius: 12px;
+            /* box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); */
+            animation: bounce 4s infinite ease-in-out;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image img:hover {
+            transform: translateY(-10px);
+        }
+
+        @keyframes textFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-image img {
+                max-width: 90%;
+            }
+        }
+        .counter-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 85%;
+            margin: 50px auto;
+        }
+
+        .counter-item {
+            text-align: center;
+            flex: 1 1 100px; /* Ensures responsive layout */
+        }
+
+        .counter-value {
+            font-size: 4.5rem;
+            /* font-weight: bold; */
+            font-family: serif;
+            color: #1a202c;
+        }
+
+        .counter-value span {
+            font-size: 1.5rem;
+            color: #4a5568;
+        }
+
+        .counter-text {
+            font-size: 1rem;
+            color: #4a5568;
+            margin-top: 5px;
+        }
+
+        .dot {
+            font-size: 2rem;
+            color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .counter-section {
+                flex-direction: column; /* Stack counters vertically for smaller screens */
+                text-align: center;
+            }
+
+            .dot {
+                display: none; /* Hide dots on small screens for better readability */
+            }
+
+            .counter-value {
+                font-size: 4.5rem;
+            }
+
+            .counter-text {
+                font-size: 1.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .counter-value {
+                font-size: 4.5rem;
+            }
+
+            .counter-text {
+                font-size: 1.8rem;
+            }
+        }
+
+
+        /* General Styles */
+.vision-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    background-color: #fff;
+    color: #333;
+}
+
+.vision-left {
+    flex: 1 1 40%;
+    padding: 20px;
+}
+
+.vision-tag {
+    display: inline-block;
+    background-color: #f3f1ff;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.vision-left h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.btn.about-us {
+    background-color: #162243;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn.about-us:hover {
+    background-color: #0f1833;
+}
+
+/* Right Section */
+.vision-right {
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vision-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.vision-item:hover {
+    transform: translateY(-5px);
+}
+
+.icon-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f1ff;
+    color: #5a4dcf;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.vision-text h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.vision-text p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vision-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vision-left,
+    .vision-right {
+        flex: 1 1 100%;
+    }
+
+    .vision-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .icon-container {
+        margin-bottom: 10px;
+    }
+}
+
+/* General Section Styles */
+.services-section {
+    padding: 60px 10%;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+.services-header {
+    margin-bottom: 40px;
+}
+
+.services-tag {
+    display: inline-block;
+    background-color: #f3f1ff;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.services-header h1 {
+    font-size: 32px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Service Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.service-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Icon Wrapper */
+.icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f1ff;
+    color: #162243;
+    font-size: 32px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Text Content */
+.service-card h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-header h1 {
+        font-size: 24px;
+    }
+
+    .icon-wrapper {
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+    }
+
+    .service-card h3 {
+        font-size: 16px;
+    }
+}
+
+
+/* Doctors Section */
+/* Doctors Section */
+.doctors-section {
+    padding: 60px 10%;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+}
+
+.doctors-header {
+    margin-bottom: 40px;
+}
+
+.doctors-tag {
+    display: inline-block;
+    background-color: #f3f1ff;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.doctors-header h1 {
+    font-size: 32px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Doctors Slider */
+.doctors-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.doctors-track {
+    padding: 2px;
+    display: flex;
+    gap: 20px;
+    animation: scroll-infinite 15s linear infinite;
+    will-change: transform; /* Optimize performance */
+}
+
+/* Doctor Card Styling */
+.doctor-card {
+    min-width: 250px;
+    flex: 0 0 auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Doctor Text */
+.doctor-card h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.doctor-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .doctors-header h1 {
+        font-size: 24px;
+    }
+
+    .doctor-card {
+        min-width: 200px;
+        padding: 15px;
+    }
+
+    .doctor-card h3 {
+        font-size: 16px;
+    }
+}
+
+/* Keyframes for Infinite Scrolling */
+@keyframes scroll-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Testimonial Section */
+/* Testimonial Section */
+.testimonial-section {
+    padding: 60px 10%;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+}
+
+.testimonial-header {
+    margin-bottom: 40px;
+}
+
+.testimonial-tag {
+    display: inline-block;
+    background-color: #f3f1ff;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.testimonial-header h1 {
+    font-size: 32px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Testimonial Slider Wrapper */
+.testimonial-slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 240px; /* Adjust height based on content */
+}
+
+/* Testimonial Slider */
+.testimonial-slider {
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(100%);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 80%;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.testimonial-card.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.testimonial-card.previous {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.testimonial-text {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial-author h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+.testimonial-author span {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Arrow Buttons */
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #33333345;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    z-index: 10;
+}
+
+.arrow-btn:hover {
+    background: #555;
+}
+
+.left-arrow {
+    left: 7px;
+}
+
+.right-arrow {
+    right: 7px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonial-header h1 {
+        font-size: 24px;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+    }
+
+    .arrow-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
+
+/* Contact Card Section */
+.contact-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 500px; /* Adjust height based on the image and design */
+    background-image: url('./images/home.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.contact-content {
+    max-width: 50%; /* Left side width for text */
+    text-align: left;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
+}
+
+.contact-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.contact-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.contact-btn {
+    background-color: #f3f1ff;
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-card {
+        height: 350px;
+        padding: 0 5%;
+    }
+
+    .contact-content {
+        max-width: 100%; /* Full width for smaller screens */
+        text-align: center;
+    }
+
+    .contact-content h2 {
+        font-size: 24px;
+    }
+
+    .contact-content p {
+        font-size: 18px;
+    }
+
+    .contact-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-top {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.footer-company-name {
+    font-size: 36px;
+    font-weight: 700;
+    color: #f3f1ff;
+    margin-bottom: 10px;
+}
+
+.footer-slogan {
+    font-size: 18px;
+    font-style: italic;
+    color: #bbb;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Footer Grid */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.footer-links {
+    text-align: left;
+}
+
+.footer-links h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #f3f1ff;
+}
+
+.footer-links a {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #f3f1ff;
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack the sections on smaller screens */
+        gap: 30px;
+    }
+
+    .footer-section {
+        padding: 40px 5%;
+    }
+
+    .footer-company-name {
+        font-size: 28px;
+    }
+
+    .footer-slogan {
+        font-size: 16px;
+    }
+
+    .footer-links h3 {
+        font-size: 18px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <!-- <nav>
+        <div class="nav-content">
+            <div class="logo">Shivoham</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#doctors">Doctors</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav> -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo"><i class="bi bi-heart-pulse-fill" style="font-size: 1.28rem;"></i> Shivoham Healthcare</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#doctors">Doctors</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="contact-info">
+                <p class="m-0">Phone: +91-9119334773</p>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span>&#9776;</span>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+          
+           
+            <p> <i class="bi bi-star-fill"></i> Holistic Healing and Rejuvenation</p>
+            <h1>Your Journey to Wellness Starts Here</h1>
+            <p>Explore a secure, comprehensive method towards health and wellness. Our seasoned professionals blend age-old Ayurvedic knowledge with contemporary physiotherapy.</p>
+            <button class="cta-button">Book Now</button>
+            <button type="button" class="btn btn-outline-secondary generic-button">About Us</button>
+        </div>
+        <div class="hero-image">
+            <img src="./images/home3.jpg" alt="Wellness Image">
+        </div>
+    </section>
+
+    
+    <!-- Counts section -->
+    <section class="counter-section">
+        <div class="counter-item">
+            <div style="display: flex;
+                align-items: center;justify-content: center;
+            ">
+            <div class="counter-value" data-target="98">0</div>
+            <i class="bi bi-percent" style="font-size: 4rem;"></i>
+            </div>
+            <div class="counter-text">Satisfaction rate</div>
+        </div>
+        <div class="dot">•</div>
+        <div class="counter-item">
+            <div style="display: flex;
+                align-items: center;justify-content: center;
+            ">
+            <div class="counter-value" data-target="10">0</div>
+            <i class="bi bi-plus" style="font-size: 4rem;"></i>
+            </div>
+            <div class="counter-text">Years of experience</div>
+        </div>
+        <div class="dot">•</div>
+        <div class="counter-item">
+            <div style="display: flex;
+                align-items: center;justify-content: center;
+            ">
+                <div class="counter-value" data-target="500">
+                    0 
+                </div><i class="bi bi-plus" style="font-size: 4rem;"></i>
+            </div>
+           
+            <div class="counter-text">Patients Treated</div>
+        </div>
+        <div class="dot">•</div>
+        <div class="counter-item">
+            <div class="counter-value" data-target="5">0</div>
+            <div class="counter-text">Expert Doctors</div>
+        </div>
+    </section>
+
+    <!-- Our Vision -->
+    <section class="vision-section">
+        <div class="vision-left">
+            <span class="vision-tag">Our Vision</span>
+            <h1>Finding health solutions with top Experts</h1>
+            <button class="btn about-us">About Us</button>
+        </div>
+        <div class="vision-right">
+            <div class="vision-item" data-aos="fade-up">
+                <div class="icon-container">
+                    <i class="bi bi-check-circle-fill"></i>
+                </div>
+                <div class="vision-text">
+                    <h3>Patient-Centered Care</h3>
+                    <p>We prioritize patient needs and preferences, ensuring personalized treatment.</p>
+                </div>
+            </div>
+            <div class="vision-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-container">
+                    <i class="bi bi-check-circle-fill"></i>
+                </div>
+                <div class="vision-text">
+                    <h3>Innovative Health Solutions</h3>
+                    <p>We leverage cutting-edge technology and research to deliver healthcare services.</p>
+                </div>
+            </div>
+            <div class="vision-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-container">
+                    <i class="bi bi-check-circle-fill"></i>
+                </div>
+                <div class="vision-text">
+                    <h3>Holistic Wellness</h3>
+                    <p>We provide comprehensive health solutions, focusing on both mind and body.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services  -->
+    <section class="services-section">
+        <div class="services-header">
+            <span class="services-tag">Services</span>
+            <h1>Different types of department we have for your healthcare</h1>
+        </div>
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up">
+                <div class="icon-wrapper">
+                    <i class="bi bi-baby"></i>
+                </div>
+                <h3>Pediatrics</h3>
+                <p>Monitor your child's growth and development to ensure their health at every stage.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-wrapper">
+                    <i class="bi bi-hospital"></i>
+                </div>
+                <h3>Orthopedics</h3>
+                <p>We assess musculoskeletal health to restore mobility and relieve pain.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-wrapper">
+                    <i class="bi bi-lungs"></i>
+                </div>
+                <h3>Gastroenterology</h3>
+                <p>Evaluate your digestive system to manage and treat digestive conditions.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our doctors  -->
+    <section class="doctors-section">
+        <div class="doctors-header">
+            <span class="doctors-tag">Our Doctors</span>
+            <h1>Meet our team of skilled professionals</h1>
+        </div>
+        <div class="doctors-slider">
+            <div class="doctors-track">
+                <!-- Original List of Doctors -->
+                <div class="doctor-card">
+                    <h3>Dr. Nilesh Vashistha</h3>
+                    <p>Ayurveda & Naturopathy</p>
+                </div>
+                <div class="doctor-card">
+                    <h3>Dr. Poonam Choudhary</h3>
+                    <p>Ayurveda & Naturopathy</p>
+                </div>
+                <div class="doctor-card">
+                    <h3>Dr. Mubarik Ali Mughal</h3>
+                    <p>Unani</p>
+                </div>
+                <div class="doctor-card">
+                    <h3>Dr. Nilesh Vashistha</h3>
+                    <p>Ayurveda & Naturopathy</p>
+                </div>
+                <div class="doctor-card">
+                    <h3>Dr. Poonam Choudhary</h3>
+                    <p>Ayurveda & Naturopathy</p>
+                </div>
+                <div class="doctor-card">
+                    <h3>Dr. Mubarik Ali Mughal</h3>
+                    <p>Unani</p>
+                </div>
+               
+    
+                <!-- Duplicate Cards for Seamless Loop -->
+
+                <div class="doctor-card">
+                    <h3>Dr. Nilesh Vashistha</h3>
+                    <p>Ayurveda & Naturopathy</p>
+                </div>
+                <div class="doctor-card">
+                    <h3>Dr. Poonam Choudhary</h3>
+                    <p>Ayurveda & Naturopathy</p>
+                </div>
+                <div class="doctor-card">
+                    <h3>Dr. Mubarik Ali Mughal</h3>
+                    <p>Unani</p>
+                </div>
+                <div class="doctor-card">
+                    <h3>Dr. Nilesh Vashistha</h3>
+                    <p>Ayurveda & Naturopathy</p>
+                </div>
+                <div class="doctor-card">
+                    <h3>Dr. Poonam Choudhary</h3>
+                    <p>Ayurveda & Naturopathy</p>
+                </div>
+                <div class="doctor-card">
+                    <h3>Dr. Mubarik Ali Mughal</h3>
+                    <p>Unani</p>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Testimonial Section  -->
+    <section class="testimonial-section">
+        <div class="testimonial-header">
+            <span class="testimonial-tag">Testimonials</span>
+            <h1>What our clients say about us</h1>
+        </div>
+        <div class="testimonial-slider-wrapper">
+            <button class="arrow-btn left-arrow" aria-label="Previous">
+                &#9664;
+            </button>
+            <div class="testimonial-slider">
+                <div class="testimonial-card active">
+                    <p class="testimonial-text">
+                        "The level of care and attention I received was exceptional. The staff made me feel so comfortable, and their expertise is unmatched. Highly recommend!"
+                    </p>
+                    <div class="testimonial-author">
+                        <h3>Riya Sharma</h3>
+                        <span>Business Consultant</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "Their holistic approach to health and wellness truly transformed my life. I’ve never felt better. The team is simply outstanding!"
+                    </p>
+                    <div class="testimonial-author">
+                        <h3>Ankit Verma</h3>
+                        <span>Software Engineer</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "A wonderful experience! They listened to my concerns and provided personalized care. I can’t thank them enough for their dedication."
+                    </p>
+                    <div class="testimonial-author">
+                        <h3>Neha Gupta</h3>
+                        <span>Freelance Designer</span>
+                    </div>
+                </div>
+            </div>
+            <button class="arrow-btn right-arrow" aria-label="Next">
+                &#9654;
+            </button>
+        </div>
+    </section>
+    
+    
+
+    <!-- Contact Card  -->
+    <section class="contact-card">
+        <div class="contact-content">
+            <h2>Ready to take care of your health and future?</h2>
+            
+            <button class="contact-btn">Get Started</button>
+        </div>
+    </section>
+    
+    
+    <footer class="footer-section">
+        <div class="footer-top">
+            <h2 class="footer-company-name"> <i class="bi bi-heart-pulse-fill" style="font-size: 1.5rem;"></i> Shivoham Healthcare</h2>
+            <p class="footer-slogan">Creative healthcare template to launch your site quick and easily</p>
+        </div>
+        <div class="footer-grid">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#doctors">Doctors</a>
+            </div>
+            <div class="footer-links">
+                <h3>Services</h3>
+                <a href="#">Physiotherapy</a>
+                <a href="#">Naturopathy</a>
+                <a href="#">Acupuncture</a>
+                <a href="#">Massage Therapy</a>
+            </div>
+            <div class="footer-links">
+                <h3>Contact Us</h3>
+                <p>123 Healing Street</p>
+                <p>Wellness City, WC 12345</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@healingtouch.com</p>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Shivoham. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Newsletter Section
+    <section class="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with our latest health tips and clinic news</p>
+        <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email">
+            <button type="submit" class="cta-button">Subscribe</button>
+        </form>
+    </section> -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+
+        // Mobile responsiveness
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 768) {
+                AOS.refresh();
+            }
+        });
+
+        //counters
+        const counters = document.querySelectorAll('.counter-value');
+        const speed = 200; // Lower number for faster animation
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+
+                // Increment value
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCount();
+        });
+
+
+        // JavaScript for Testimonial Switching Animation
+        document.addEventListener("DOMContentLoaded", () => {
+        const testimonialCards = document.querySelectorAll(".testimonial-card");
+        const leftArrow = document.querySelector(".left-arrow");
+        const rightArrow = document.querySelector(".right-arrow");
+
+        let currentIndex = 0;
+
+        function showTestimonial(index) {
+            testimonialCards.forEach((card, i) => {
+                card.classList.remove("active", "previous");
+                if (i === index) {
+                    card.classList.add("active");
+                } else if (i === (index - 1 + testimonialCards.length) % testimonialCards.length) {
+                    card.classList.add("previous");
+                }
+            });
+        }
+
+        // Navigate to next testimonial
+        function nextTestimonial() {
+            currentIndex = (currentIndex + 1) % testimonialCards.length;
+            showTestimonial(currentIndex);
+        }
+
+        // Navigate to previous testimonial
+        function previousTestimonial() {
+            currentIndex =
+                (currentIndex - 1 + testimonialCards.length) % testimonialCards.length;
+            showTestimonial(currentIndex);
+        }
+
+        // Attach event listeners to arrows
+        leftArrow.addEventListener("click", previousTestimonial);
+        rightArrow.addEventListener("click", nextTestimonial);
+
+        // Auto-slide every 5 seconds
+        setInterval(nextTestimonial, 5000); // Adjust time as needed
+        });
+
+
+    </script>
+    </body>
+    </html>
