@@ -9,7 +9,6 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
@@ -267,7 +266,7 @@ nav {
         }
 
         .counter-value {
-            font-size: 4.5rem;
+            font-size: 4rem;
             /* font-weight: bold; */
             font-family: serif;
             color: #1a202c;
@@ -329,7 +328,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 50px 10%;
-    background-color: #fff;
+    background-color: #ebf4fb;
     color: #333;
 }
 
@@ -440,7 +439,7 @@ nav {
 /* General Section Styles */
 .services-section {
     padding: 60px 10%;
-    background-color: #fff;
+    background-color: #f8f9fa;
     color: #333;
     text-align: center;
 }
@@ -473,7 +472,7 @@ nav {
     margin-top: 20px;
 }
 
-.service-card {
+/* .service-card {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -481,7 +480,28 @@ nav {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
     text-align: left;
+} */
+/* Image inside service card */
+.service-card {
+    background-color:  #ebf4fb;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+    transition: transform 0.3s ease;
+    text-align: left;
+    position: relative; /* For positioning the image */
 }
+
+.service-image {
+    width: 100%;
+    height: 200px; /* You can adjust this based on your layout */
+    object-fit: cover; /* Ensures the image fills the container and keeps aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Rest of the CSS remains unchanged */
 
 .service-card:hover {
     transform: translateY(-5px);
@@ -533,10 +553,9 @@ nav {
 
 
 /* Doctors Section */
-/* Doctors Section */
 .doctors-section {
     padding: 60px 10%;
-    background-color: #fff;
+    background-color: #ebf4fb;
     color: #333;
     text-align: center;
     overflow: hidden;
@@ -633,7 +652,6 @@ nav {
     }
 }
 
-/* Testimonial Section */
 /* Testimonial Section */
 .testimonial-section {
     padding: 60px 10%;
@@ -786,7 +804,7 @@ nav {
     align-items: center;
     justify-content: flex-start;
     height: 500px; /* Adjust height based on the image and design */
-    background-image: url('./home.jpg'); /* Replace with your image */
+    background-image: url('./images/home.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -816,7 +834,7 @@ nav {
 
 .contact-btn {
     background-color: #f3f1ff;
-    color: #333;
+    color: #03bd3b;
     border: none;
     border-radius: 30px;
     padding: 15px 30px;
@@ -959,6 +977,167 @@ nav {
         font-size: 12px;
     }
 }
+
+
+/* Chatbot Section */
+.chatbot-section {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+/* Chat Icon */
+.chatbot-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Chatbot Container */
+.chatbot-container {
+    background: #fff;
+    border-radius: 10px;
+    width: 350px;
+    /* max-height: 500px; */
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    animation: fadeInUp 0.3s ease-in-out;
+}
+
+/* Chatbot Header */
+.chatbot-header {
+    border-bottom: 1px solid rgb(14 202 240) ;
+}
+
+/* Chatbot Body */
+.chatbot-body {
+    /* background-image: url("https://img.freepik.com/free-vector/hand-drawn-ai-healthcare-illustration_23-2151106563.jpg?t=st=1731849472~exp=1731853072~hmac=56c728d69f72858edf6a1d640a5150262e1a75fa6d3b7cb21612fb09d504c6ad&w=740"); */
+
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Chatbot Footer */
+.chatbot-footer {
+    background-color: rgb(242 248 255);
+    position: sticky;
+    bottom: 0;
+    background: #f8f9fa;
+    z-index: 2;
+}
+
+/* Bot Message */
+.bot-message {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* User Message */
+.user-message {
+    align-self: flex-end;
+    font-size: 0.9rem;
+}
+
+/* Animation for Fade In */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+.hero-collage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #00a1df14;
+}
+
+.collage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 100%;
+}
+
+.collage-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.collage-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slide in from below */
+    animation: fadeInSlideUp 0.8s ease-out forwards; /* Animation defined below */
+}
+
+.collage-img:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.collage-img:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.collage-img:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.collage-img:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.collage-img:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.collage-img:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+/* Define the fadeInSlideUp animation */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+
     </style>
 </head>
 <body>
@@ -975,6 +1154,41 @@ nav {
             </div>
         </div>
     </nav> -->
+
+
+    <section class="chatbot-section">
+        <!-- Chat Icon -->
+        <button class="btn btn-outline-info rounded-circle shadow-lg chatbot-icon" style="background: aliceblue;" id="chatbot-icon">
+            <i class="bi bi-chat-dots"></i>
+        </button>
+    
+        <!-- Chatbot Interface -->
+        <div class="chatbot-container d-none" id="chatbot-container">
+            <div class="chatbot-header d-flex justify-content-between align-items-center p-3 bg-info text-black">
+                <h5 class="mb-0"><i class="bi bi-heart-pulse-fill" style="font-size: 1.28rem;"></i> Shivoham Bot</h5>
+                <button class="btn btn-close btn-close-black" id="chatbot-close"></button>
+            </div>
+            <div class="chatbot-body p-3" id="chatbot-body">
+                <div class="bot-message bg-light p-2 rounded mb-3">
+                    <p>Hi! Welcome to <strong>Shivoham Health & Wellness Centre</strong>.</p>
+                    <p>How can we assist you today?</p>
+                    <p>Select an option below:</p>
+                </div>
+                <!-- Chat messages will dynamically populate here -->
+
+            </div>
+            <div class="chatbot-footer p-3" id="chatbot-footer">
+                <div class="chatbot-options d-grid gap-2">
+                    <button class="btn btn-outline-info" data-response="opening">Opening Hours</button>
+                    <button class="btn btn-outline-info" data-response="treatments">Treatments Offered</button>
+                    <button class="btn btn-outline-info" data-response="location">Location</button>
+                    <button class="btn btn-outline-info" data-response="contact">Contact Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
     <nav>
         <div class="nav-content">
             <div class="logo"><i class="bi bi-heart-pulse-fill" style="font-size: 1.28rem;"></i> Shivoham Healthcare</div>
@@ -986,7 +1200,10 @@ nav {
                 <a href="#contact">Contact</a>
             </div>
             <div class="contact-info">
-                <p class="m-0">Phone: +91-9119334773</p>
+                <!-- <p class="m-0">Phone: +91-9119334773</p> -->
+                <p class="m-0"> Phone:
+                    <a href="tel:+919119334773"> +91-9119334773</a>
+                </p>
             </div>
             <div class="menu-toggle" onclick="toggleMenu()">
                 <span>&#9776;</span>
@@ -996,7 +1213,7 @@ nav {
     
 
     <!-- Hero Section -->
-    <section class="hero">
+    <!-- <section class="hero">
         <div class="hero-content">
           
            
@@ -1007,9 +1224,34 @@ nav {
             <button type="button" class="btn btn-outline-secondary generic-button">About Us</button>
         </div>
         <div class="hero-image">
-            <img src="./home3.jpg" alt="Wellness Image">
+            <img src="./images/home3.jpg" alt="Wellness Image">
+        </div>
+    </section> -->
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p><i class="bi bi-star-fill"></i> Holistic Healing and Rejuvenation</p>
+            <h1>Your Journey to Wellness Starts Here</h1>
+            <p>Explore a secure, comprehensive method towards health and wellness. Our seasoned professionals blend age-old Ayurvedic knowledge with contemporary physiotherapy.</p>
+            <a href="#contact"> <button class="cta-button">Book Now</button></a>
+            <a href="#about">  <button type="button" class="btn btn-outline-secondary generic-button">About Us</button></a>
+           
+        </div>
+        <div class="hero-collage">
+            <div class="collage-grid" style="width: 95%;">
+                <img src="./images/home4.jpg" alt="Ayurveda" class="collage-img">
+                <img src="./images/home7.jpg" alt="Physiotherapy" class="collage-img">
+                <img src="./images/home3.jpg" alt="Massage Therapy" class="collage-img">
+                <img src="./images/home5.jpg" alt="Wellness" class="collage-img">
+                <img src="./images/home6.jpg" alt="Ayurveda" class="collage-img">
+                <img src="./images/home8.jpg" alt="Physiotherapy" class="collage-img">
+
+                
+                
+            </div>
         </div>
     </section>
+    
 
     
     <!-- Counts section -->
@@ -1053,11 +1295,11 @@ nav {
     </section>
 
     <!-- Our Vision -->
-    <section class="vision-section">
+    <section class="vision-section" id="about">
         <div class="vision-left">
             <span class="vision-tag">Our Vision</span>
             <h1>Finding health solutions with top Experts</h1>
-            <button class="btn about-us">About Us</button>
+            <!-- <button class="btn about-us">About Us</button> -->
         </div>
         <div class="vision-right">
             <div class="vision-item" data-aos="fade-up">
@@ -1090,39 +1332,108 @@ nav {
         </div>
     </section>
 
-    <!-- Our Services  -->
-    <section class="services-section">
+
+
+    <!-- Services Section  -->
+    <section class="services-section" id="services">
         <div class="services-header">
-            <span class="services-tag">Services</span>
-            <h1>Different types of department we have for your healthcare</h1>
+            <span class="services-tag">Services & Treatments</span>
+            <h1>Different types of Treatments we have for your healthcare</h1>
         </div>
         <div class="services-grid">
             <div class="service-card" data-aos="fade-up">
-                <div class="icon-wrapper">
-                    <i class="bi bi-baby"></i>
-                </div>
-                <h3>Pediatrics</h3>
-                <p>Monitor your child's growth and development to ensure their health at every stage.</p>
+                <img src="./images/Panchkarma.jpg" alt="Panchkarma" class="service-image" />
+                <h3>Panchkarma</h3>
+                <p>A therapeutic process to cleanse the body and restore balance through detoxification.</p>
+                <a href="https://wa.me/919119334773?text=I%20would%20like%20to%20book%20an%20appointment%20for%20Panchkarma%20therapy." target="_blank" class="btn btn-outline-success mt-2">
+                    <i class="bi bi-whatsapp"></i> Book Panchkarma
+                </a>
             </div>
             <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon-wrapper">
-                    <i class="bi bi-hospital"></i>
-                </div>
-                <h3>Orthopedics</h3>
-                <p>We assess musculoskeletal health to restore mobility and relieve pain.</p>
+                <img src="./images/Neurotherapy.jpg" alt="Neurotherapy" class="service-image" />
+                <h3>Neurotherapy</h3>
+                <p>Helps restore the nervous system's health and improve overall body functioning.</p>
+                <a href="https://wa.me/919119334773?text=I%20would%20like%20to%20book%20an%20appointment%20for%20Neurotherapy." target="_blank" class="btn btn-outline-success mt-2">
+                    <i class="bi bi-whatsapp"></i> Book Neurotherapy
+                </a>
             </div>
             <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="icon-wrapper">
-                    <i class="bi bi-lungs"></i>
-                </div>
-                <h3>Gastroenterology</h3>
-                <p>Evaluate your digestive system to manage and treat digestive conditions.</p>
+                <img src="./images/Physiotherapy.jpg" alt="Physiotherapy" class="service-image" />
+                <h3>Physiotherapy</h3>
+                <p>Physical treatments designed to improve movement and manage pain without surgery.</p>
+                <a href="https://wa.me/919119334773?text=I%20would%20like%20to%20book%20an%20appointment%20for%20Physiotherapy." target="_blank" class="btn btn-outline-success mt-2">
+                    <i class="bi bi-whatsapp"></i> Book Physiotherapy
+                </a>
+            </div>
+            <div class="service-card" data-aos="fade-up">
+                <img src="./images/Hijama.jpg" alt="Hijama Cupping Therapy" class="service-image" />
+                <h3>Hijama Cupping Therapy</h3>
+                <p>Traditional therapy that uses suction cups to improve circulation and detoxify the body.</p>
+                <a href="https://wa.me/919119334773?text=I%20would%20like%20to%20book%20an%20appointment%20for%20Hijama%20Cupping%20therapy." target="_blank" class="btn btn-outline-success mt-2">
+                    <i class="bi bi-whatsapp"></i> Book Hijama Therapy
+                </a>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="./images/Acupuncture.jpg" alt="Acupuncture" class="service-image" />
+                <h3>Acupuncture</h3>
+                <p>Traditional Chinese medicine technique that uses needles to stimulate specific points on the body.</p>
+                <a href="https://wa.me/919119334773?text=I%20would%20like%20to%20book%20an%20appointment%20for%20Acupuncture." target="_blank" class="btn btn-outline-success mt-2">
+                    <i class="bi bi-whatsapp"></i> Book Acupuncture Session
+                </a>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="./images/Acupressure.jpg" alt="Accupressure" class="service-image" />
+                <h3>Accupressure</h3>
+                <p>Healing practice using physical pressure applied to key points to balance the body's energy.</p>
+                <a href="https://wa.me/919119334773?text=I%20would%20like%20to%20book%20an%20appointment%20for%20Accupressure%20session." target="_blank" class="btn btn-outline-success mt-2">
+                    <i class="bi bi-whatsapp"></i> Book Accupressure Session
+                </a>
+            </div>
+            <div class="service-card" data-aos="fade-up">
+                <img src="./images/Agnikarma.jpg" alt="Agnikarma" class="service-image" />
+                <h3>Agnikarma</h3>
+                <p>Therapeutic use of heat to treat pain and inflammation in the body.</p>
+                <a href="https://wa.me/919119334773?text=I%20would%20like%20to%20book%20an%20appointment%20for%20Agnikarma%20therapy." target="_blank" class="btn btn-outline-success mt-2">
+                    <i class="bi bi-whatsapp"></i> Book Agnikarma Session
+                </a>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="./images/Sirodhara.jpg" alt="Sarodhara" class="service-image" />
+                <h3>Sarodhara</h3>
+                <p>A traditional Ayurvedic therapy where medicated oil is poured over the forehead to relax the mind.</p>
+                <a href="https://wa.me/919119334773?text=I%20would%20like%20to%20book%20an%20appointment%20for%20Sarodhara%20Session." target="_blank" class="btn btn-outline-success mt-2">
+                    <i class="bi bi-whatsapp"></i> Book Sarodhara Session
+                </a>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="./images/Basti.jpg" alt="Basti" class="service-image" />
+                <h3>Basti</h3>
+                <p>An Ayurvedic detox treatment that uses medicated enemas to cleanse the colon.</p>
+                <a href="https://wa.me/919119334773?text=I%20would%20like%20to%20book%20an%20appointment%20for%20Basti%20Session." target="_blank" class="btn btn-outline-success mt-2">
+                    <i class="bi bi-whatsapp"></i> Book Basti Session
+                </a>
+            </div>
+            <div class="service-card" data-aos="fade-up">
+                <img src="./images/Mudtherapy.jpg" alt="Mud Therapy" class="service-image" />
+                <h3>Mud Therapy</h3>
+                <p>Therapy using natural mud to help detoxify and rejuvenate the skin and body.</p>
+                <a href="https://wa.me/919119334773?text=I%20would%20like%20to%20book%20an%20appointment%20for%20Mud%20therapy." target="_blank" class="btn btn-outline-success mt-2">
+                    <i class="bi bi-whatsapp"></i> Book Mud therapy
+                </a>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="./images/Watertherapy.jpg" alt="Water Therapy" class="service-image" />
+                <h3>Water Therapy</h3>
+                <p>Healing treatment using water in different forms, including baths, compresses, and drinking.</p>
+                <a href="https://wa.me/919119334773?text=I%20would%20like%20to%20book%20an%20appointment%20for%20Water%20therapy." target="_blank" class="btn btn-outline-success mt-2">
+                    <i class="bi bi-whatsapp"></i> Book Water therapy
+                </a>
             </div>
         </div>
     </section>
     
     <!-- Our doctors  -->
-    <section class="doctors-section">
+    <section class="doctors-section" id="doctors">
         <div class="doctors-header">
             <span class="doctors-tag">Our Doctors</span>
             <h1>Meet our team of skilled professionals</h1>
@@ -1205,7 +1516,7 @@ nav {
                     </p>
                     <div class="testimonial-author">
                         <h3>Riya Sharma</h3>
-                        <span>Business Consultant</span>
+                        <!-- <span>Business Consultant</span> -->
                     </div>
                 </div>
                 <div class="testimonial-card">
@@ -1214,7 +1525,7 @@ nav {
                     </p>
                     <div class="testimonial-author">
                         <h3>Ankit Verma</h3>
-                        <span>Software Engineer</span>
+                        <!-- <span>Software Engineer</span> -->
                     </div>
                 </div>
                 <div class="testimonial-card">
@@ -1223,7 +1534,7 @@ nav {
                     </p>
                     <div class="testimonial-author">
                         <h3>Neha Gupta</h3>
-                        <span>Freelance Designer</span>
+                        <!-- <span>Freelance Designer</span> -->
                     </div>
                 </div>
             </div>
@@ -1236,19 +1547,22 @@ nav {
     
 
     <!-- Contact Card  -->
-    <section class="contact-card">
+    <section class="contact-card" id="contact">
         <div class="contact-content">
             <h2>Ready to take care of your health and future?</h2>
-            
-            <button class="contact-btn">Get Started</button>
+            <a href="https://wa.me/919119334773?text=Hello%20Shivoham%20Health%20Centre" target="_blank">
+                <button class="contact-btn"><i class="bi bi-whatsapp"></i> Book an Appointment</button>
+            </a>
+        
         </div>
     </section>
     
     
+    <!-- Footer Section  -->
     <footer class="footer-section">
         <div class="footer-top">
             <h2 class="footer-company-name"> <i class="bi bi-heart-pulse-fill" style="font-size: 1.5rem;"></i> Shivoham Healthcare</h2>
-            <p class="footer-slogan">Creative healthcare template to launch your site quick and easily</p>
+            <p class="footer-slogan"> Holistic Healing and Rejuvenation</p>
         </div>
         <div class="footer-grid">
             <div class="footer-links">
@@ -1260,17 +1574,23 @@ nav {
             </div>
             <div class="footer-links">
                 <h3>Services</h3>
-                <a href="#">Physiotherapy</a>
-                <a href="#">Naturopathy</a>
-                <a href="#">Acupuncture</a>
-                <a href="#">Massage Therapy</a>
+                <a href="#services">Physiotherapy</a>
+                <a href="#services">Naturopathy</a>
+                <a href="#services">Acupuncture</a>
+                <a href="#services">Massage Therapy</a>
             </div>
             <div class="footer-links">
                 <h3>Contact Us</h3>
-                <p>123 Healing Street</p>
-                <p>Wellness City, WC 12345</p>
-                <p>Phone: (123) 456-7890</p>
-                <p>Email: info@healingtouch.com</p>
+                <p>Shivoham Health & Wellness Center</p>
+                <p>Shayam Nagar, Sector - 9</p>
+                <p>Akshar Dham mandir chowk, Vaishali nagar, Jaipur</p>
+                <p>
+                    <a href="tel:+919119334773">Phone: +91-9119334773</a>
+                </p>
+                <p>
+                    <a href="mailto:shivoham.health@gmail.com">Email: shivoham.health@gmail.com</a>
+                </p>
+                
             </div>
         </div>
         <div class="footer-copyright">
@@ -1322,27 +1642,46 @@ nav {
         });
 
         //counters
-        const counters = document.querySelectorAll('.counter-value');
-        const speed = 200; // Lower number for faster animation
+        document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll('.counter-value');
+    const speed = 50; // Lower number for faster animation
 
-        counters.forEach(counter => {
-            const updateCount = () => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
+    const updateCount = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
 
-                // Increment value
-                const increment = target / speed;
+        // Increment value
+        const increment = target / speed;
 
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(updateCount, 20);
-                } else {
-                    counter.innerText = target;
-                }
-            };
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(() => updateCount(counter), 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
 
-            updateCount();
-        });
+    // Function to start the counter animation
+    const startCounterAnimation = (entry, observer) => {
+        if (entry.isIntersecting) {
+            // Start the counter animation when the section is in view
+            counters.forEach(counter => updateCount(counter));
+
+            // Once the counter animation starts, stop observing
+            observer.unobserve(entry.target);
+        }
+    };
+
+    // Set up Intersection Observer to detect when the section is in view
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => startCounterAnimation(entry, observer));
+    }, { threshold: 0.5 }); // Trigger when 50% of the section is in view
+
+    // Observe the counter section
+    const counterSection = document.querySelector('.counter-section');
+    observer.observe(counterSection);
+});
+
 
 
         // JavaScript for Testimonial Switching Animation
@@ -1384,6 +1723,87 @@ nav {
         // Auto-slide every 5 seconds
         setInterval(nextTestimonial, 5000); // Adjust time as needed
         });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+        const chatIcon = document.getElementById("chatbot-icon");
+        const chatContainer = document.getElementById("chatbot-container");
+        const closeButton = document.getElementById("chatbot-close");
+        const options = document.querySelectorAll(".chatbot-options button");
+        const chatbotBody = document.getElementById("chatbot-body");
+
+        // Toggle Chatbot Container
+        chatIcon.addEventListener("click", () => {
+            chatContainer.classList.remove("d-none");
+        });
+
+        closeButton.addEventListener("click", () => {
+            chatContainer.classList.add("d-none");
+        });
+
+        // Handle Option Click
+        options.forEach(option => {
+            option.addEventListener("click", (e) => {
+                const responseType = e.target.dataset.response;
+                let responseMessage = "";
+
+                switch (responseType) {
+                    case "opening":
+                        responseMessage = "We are open from Monday to Saturday, 8 AM to 8 PM.";
+                        break;
+                    case "treatments":
+                        responseMessage = `We offer Physiotherapy, Neuropathy, Acupuncture, and Mud Therapy, etc. <a href="#services" target="_self">Click here to know more</a>.`;
+                        break;
+                    case "location":
+                        responseMessage = "We are located at Shivoham Health & Wellness Center, Shayam Nagar, Sector - 9, Akshar Dham mandir chowk, Vaishali nagar, Jaipur";
+                        break;
+                    case "contact":
+                        responseMessage = `You can reach us at <a href="tel:+919119334773">+91-9119334773</a>, <a href="mailto:shivoham.health@gmail.com">shivoham.health@gmail.com</a>, or <a href="https://wa.me/919119334773?text=Hello%20Shivoham%20Health%20Centre" target="_blank">WhatsApp</a>`;
+                        break; 
+                    default:
+                        responseMessage = "Sorry, I can't assist with that.";
+                }
+
+                // Append User Message
+                const userMessage = `<div class="user-message text-white p-2 rounded mb-3" style="background-color: rgb(22 34 67);">${e.target.innerText}</div>`;
+                chatbotBody.insertAdjacentHTML("beforeend", userMessage);
+
+                // Append Bot Response
+                const botMessage = `<div class="bot-message bg-light p-2 rounded mb-3">${responseMessage}</div>`;
+                chatbotBody.insertAdjacentHTML("beforeend", botMessage);
+
+                // Scroll to Bottom
+                chatbotBody.scrollTop = chatbotBody.scrollHeight;
+            });
+        });
+    });
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const collageSection = document.querySelector(".hero-collage"); // Or `.col-6` if needed
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Once the section is in view, add the "visible" class to all images inside
+                    const images = entry.target.querySelectorAll(".collage-img");
+                    images.forEach((img) => {
+                        img.classList.add("visible");
+                    });
+                }
+            });
+        },
+        {
+            threshold: 0.2, // Trigger when 20% of the section is visible
+            rootMargin: "0px 0px -50% 0px", // Trigger 50% before section comes into view
+        }
+    );
+
+    observer.observe(collageSection); // Observe the section (or col-6)
+});
+
 
 
     </script>
